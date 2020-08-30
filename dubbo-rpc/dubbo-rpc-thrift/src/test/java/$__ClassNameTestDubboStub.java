@@ -60,16 +60,11 @@ public class $__ClassNameTestDubboStub {
                 super("echo");
             }
 
-            public echo_args getEmptyArgsInstance() {
+            protected echo_args getEmptyArgsInstance() {
                 return new echo_args();
             }
 
-            @Override
-            protected boolean isOneway() {
-                return false;
-            }
-
-            public echo_result getResult(I iface, echo_args args) throws org.apache.thrift.TException {
+            protected echo_result getResult(I iface, echo_args args) throws org.apache.thrift.TException {
                 echo_result result = new echo_result();
                 result.success = iface.echo(args.arg);
                 return result;
